@@ -12,7 +12,7 @@ export default function UseCallback(): JSX.Element {
 
   const generateItemFromApi = useCallback(() => {
     return new Array(count).fill("").map((_, i) => `Element ${i + 1}`);
-  },[count]);
+  }, [count]);
 
   return (
     <div className={styles.container}>

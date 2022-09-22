@@ -1,3 +1,4 @@
+import CreateHooks from "../../shared/create-hooks";
 import UseCallback from "../../shared/useCallback";
 import UseContext from "../../shared/useContext";
 import UseEffect from "../../shared/useEffect";
@@ -8,12 +9,13 @@ import UseState from "../../shared/useState";
 export default function Hooks() {
   return (
     <div>
-      {/* <UseState />
+      <UseState />
       <UseEffect />
       <UseRef />
       <UseMemo />
-      <UseCallback /> */}
+      <UseCallback />
       <UseContext />
+      <CreateHooks />
     </div>
   );
 }
