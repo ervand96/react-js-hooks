@@ -4,7 +4,6 @@ import { AlertProvider } from "../alert/alertContext";
 
 import styles from "./useContext.module.scss";
 
-
 export default function UseContext() {
   return (
     <AlertProvider>

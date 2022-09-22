@@ -1,9 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import UseState from './shared/useState';
-import UseEffect from './shared/useEffect';
-import Hooks from './featured/hooks';
+import "./App.css";
+import Hooks from "./components/featured/hooks";
 
 function App() {
   return (
