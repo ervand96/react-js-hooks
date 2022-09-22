@@ -1,3 +1,4 @@
+import Button from "../../shared/button";
 import CreateHooks from "../../shared/create-hooks";
 import UseCallback from "../../shared/useCallback";
 import UseContext from "../../shared/useContext";
@@ -16,6 +17,7 @@ export default function Hooks() {
       <UseCallback />
       <UseContext />
       <CreateHooks />
+      <Button />
     </div>
   );
 }
