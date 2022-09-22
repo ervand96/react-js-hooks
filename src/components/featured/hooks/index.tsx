@@ -1,5 +1,6 @@
 import Button from "../../shared/button";
 import CreateHooks from "../../shared/create-hooks";
+import NewState from "../../shared/new-state";
 import UseCallback from "../../shared/useCallback";
 import UseContext from "../../shared/useContext";
 import UseEffect from "../../shared/useEffect";
@@ -18,6 +19,7 @@ export default function Hooks() {
       <UseContext />
       <CreateHooks />
       <Button />
+      <NewState />
     </div>
   );
 }
