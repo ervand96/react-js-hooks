@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 
 import styles from "./create-hooks.module.scss";
 
-function useLogger(value: any) {
+const useLogger = (value: any) => {
   useEffect(() => {
     console.log("Value Changed:", value);
   }, [value]);
-}
+};
 
-function useInput(initialValue: string) {
+const useInput = (initialValue: string) => {
   const [value, setValue] = useState(initialValue);
 
   const onChange = (e: any) => {
@@ -24,7 +24,7 @@ function useInput(initialValue: string) {
     value,
     clear,
   };
-}
+};
 
 export default function CreateHooks() {
   const input = useInput("");
