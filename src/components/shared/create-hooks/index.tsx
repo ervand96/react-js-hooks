@@ -36,7 +36,9 @@ export default function CreateHooks() {
       <div className={styles.input}>
         <label htmlFor="name">Name</label>
         <input type="text" id="name" {...input.bind} />
-        <button onClick={input.clear}>Clear</button>
+        <button onClick={input.clear} disabled={!input.value}>
+          Clear
+        </button>
       </div>
       <h1>{input.value}</h1>
     </div>
