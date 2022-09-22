@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-export default function State() {
+export default function State(): JSX.Element {
   const [value, setValue] = useState<string>('')
-  console.log(value, 'value')
-  const hendler = (e: any) => {
+  const handler = (e: any): void => {
     setValue(e.target.value)
   }
-  const delet = () => {
+  const clear = (): void => {
     setValue('')
   }
   return (
     <div>
-      <input onChange={hendler} value={value} type="text" />
+      <input onChange={handler} value={value} type="text" />
       <h1>{value}</h1>
-      <button onClick={delet} disabled={!value}>
-        maqrel
+      <button onClick={clear} disabled={!value}>
+        delete
       </button>
     </div>
   )
