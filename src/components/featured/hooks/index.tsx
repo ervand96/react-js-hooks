@@ -16,8 +16,9 @@ import Wstate from '../../shared/wState'
 export default function Hooks() {
   return (
     <div>
-      {/* <UseState /> 
-      <UseEffect />
+      {
+        <UseState />
+        /* <UseEffect />
       <UseRef />
       <UseMemo />
       <UseCallback />
@@ -26,8 +27,9 @@ export default function Hooks() {
       <Button />
       <NewState />
       <State /> 
-      <Wstate /> 
-      <StateNew />*/}
+      <Wstate /> */
+      }
+      <StateNew />
       <NewBr />
       <Nstate />
     </div>

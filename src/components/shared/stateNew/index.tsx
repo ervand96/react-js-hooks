@@ -11,7 +11,9 @@ export default function StateNew(): JSX.Element {
   }
   const [count, setCount] = useState<number>(0)
   const plus = (): void => {
-    setCount(count + 1)
+    if (count <= 9) {
+      setCount(count + 1)
+    }
   }
   const minus = (): void => {
     if (count > 0) {

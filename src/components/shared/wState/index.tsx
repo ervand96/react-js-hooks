@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
+
 export default function Wstate(): JSX.Element {
   const [value, setValue] = useState('')
+  const [count, setCount] = useState<number>(0)
   const handley = (e: any): void => {
     setValue(e.target.value)
   }
   const clear = (): void => {
     setValue('')
   }
-  const [count, setCount] = useState<number>(0)
-
   const increment = (): void => {
     setCount(count + 1)
   }
