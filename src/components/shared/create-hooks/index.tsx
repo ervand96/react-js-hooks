@@ -9,7 +9,7 @@ const useLogger = (value: any) => {
 };
 
 const useInput = (initialValue: string) => {
-  const [value, setValue] = useState(initialValue);
+  const [value, setValue] = useState<string>(initialValue);
 
   const onChange = (e: any) => {
     setValue(e.target.value);

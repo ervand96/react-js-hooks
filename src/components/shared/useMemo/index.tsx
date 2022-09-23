@@ -8,7 +8,7 @@ const complexCompute = (num: any) => {
   return num * 2;
 };
 
-export default function UseMemo() {
+ export default function UseMemo() {
   const [number, setNumber] = useState(42);
   const [colored, setColored] = useState(false);
 
