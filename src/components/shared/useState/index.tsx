@@ -1,37 +1,37 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import styles from "./state.module.scss";
+import styles from './state.module.scss'
 
 const computed = () => {
-  return Math.trunc(Math.random() * 20);
-};
+  return Math.trunc(Math.random() * 20)
+}
 
 export default function UseState(): JSX.Element {
-  const [count, setCount] = useState<number>(computed());
+  const [count, setCount] = useState<number>(0)
 
   const [state, setState] = useState<object>({
-    title: "Name",
+    title: 'Name',
     date: Date.now(),
-  });
+  })
 
   const increment = (): void => {
-    setCount(count + 1);
-  };
+    setCount(count + 1)
+  }
 
   const decrement = (): void => {
     if (count > 0) {
-      setCount(count - 1);
+      setCount(count - 1)
     }
-  };
+  }
 
   const updateTitle = () => {
     setState((prev) => {
       return {
         ...prev,
-        title: "Taza",
-      };
-    });
-  };
+        title: 'Taza',
+      }
+    })
+  }
 
   return (
     <div className={styles.container}>
@@ -44,5 +44,5 @@ export default function UseState(): JSX.Element {
 
       <button onClick={updateTitle}>Change Name</button>
     </div>
-  );
+  )
 }
