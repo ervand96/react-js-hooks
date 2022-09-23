@@ -1,7 +1,5 @@
-import { count } from 'console'
 import React, { useState } from 'react'
-
-export default function StateNew(): JSX.Element {
+export default function Nstate(): JSX.Element {
   const [value, setValue] = useState('')
   const handley = (e: any): void => {
     setValue(e.target.value)
@@ -9,7 +7,7 @@ export default function StateNew(): JSX.Element {
   const clear = (): void => {
     setValue('')
   }
-  const [count, setCount] = useState<number>(0)
+  const [count, setCount] = useState(0)
   const plus = (): void => {
     setCount(count + 1)
   }
@@ -18,15 +16,12 @@ export default function StateNew(): JSX.Element {
       setCount(count - 1)
     }
   }
-
   return (
     <div>
+      <h1>:Value {value}</h1>
+      <h1>:Count {count}</h1>
       <input onChange={handley} value={value} type="text" />
-      <h1>value: {value}</h1>
-      <h1>count: {count}</h1>
-      <button onClick={clear} disabled={!value}>
-        clear
-      </button>
+      <button onClick={clear}>Clear</button>
       <button onClick={plus}>Plus</button>
       <button onClick={minus}>Minus</button>
     </div>

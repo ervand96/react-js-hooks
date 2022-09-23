@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-
 export default function Wstate(): JSX.Element {
   const [value, setValue] = useState('')
-  const handler = (e: any): void => {
+  const handley = (e: any): void => {
     setValue(e.target.value)
   }
   const clear = (): void => {
@@ -23,7 +22,7 @@ export default function Wstate(): JSX.Element {
   return (
     <div>
       <h1>{value}</h1>
-      <input onChange={handler} type="text" value={value} />
+      <input onChange={handley} type="text" value={value} />
       <button onClick={clear} disabled={!value}>
         Clear
       </button>

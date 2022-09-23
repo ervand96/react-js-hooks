@@ -1,6 +1,8 @@
 import Button from '../../shared/button'
 import CreateHooks from '../../shared/create-hooks'
 import NewState from '../../shared/new-state'
+import NewBr from '../../shared/newBr'
+import Nstate from '../../shared/nstate'
 import State from '../../shared/state'
 import StateNew from '../../shared/stateNew'
 import UseCallback from '../../shared/useCallback'
@@ -23,9 +25,11 @@ export default function Hooks() {
       <CreateHooks />
       <Button />
       <NewState />
-      <State /> */}
+      <State /> 
       <Wstate /> 
-      <StateNew />
+      <StateNew />*/}
+      <NewBr />
+      <Nstate />
     </div>
   )
 }
