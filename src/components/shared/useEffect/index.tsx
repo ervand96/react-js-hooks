@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 
 import styles from "./useEffect.module.scss";
 
+const pos: Object = {
+  x: 0,
+  y: 0,
+};
+
 export default function UseEffect() {
   const [type, setType] = useState<string>("users");
   const [data, setData] = useState([]);
-  const [pos, setPos] = useState({
-    x: 0,
-    y: 0,
-  });
+  const [position, setPosition] = useState(pos);
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/${type}/10`)
@@ -17,7 +19,7 @@ export default function UseEffect() {
   }, [type]);
 
   const mouseMoveHandler = (event: any) => {
-    setPos({
+    setPosition({
       x: event.clientX,
       y: event.clientY,
     });
@@ -39,7 +41,7 @@ export default function UseEffect() {
       <button onClick={() => setType("Posts")}>Posts</button>
 
       <pre>{JSON.stringify(data, null, 2)}</pre>
-      <pre>{JSON.stringify(pos, null, 2)}</pre>
+      <pre>{JSON.stringify(position, null, 2)}</pre>
     </div>
   );
 }
