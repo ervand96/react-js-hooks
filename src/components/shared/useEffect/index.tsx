@@ -9,11 +9,11 @@ const pos: Object = {
 
 export default function UseEffect() {
   const [type, setType] = useState<string>("users");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Object>([]);
   const [position, setPosition] = useState(pos);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/${type}/10`)
+    fetch(`https://jsonplaceholder.typicode.com/${type}/1`)
       .then((response) => response.json())
       .then((json) => setData(json));
   }, [type]);
